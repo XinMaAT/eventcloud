@@ -61,7 +61,7 @@ namespace EventCloud.Web.Host.Startup
             // Swagger - Enable this line and the related lines in Configure method to enable swagger UI
             services.AddSwaggerGen(options =>
             {
-                options.SwaggerDoc("v1", new Info { Title = "EventCloud API", Version = "v1" });
+                options.SwaggerDoc("v1", new Info { Title = "CPULohn SaaS API", Version = "v1" });
                 options.DocInclusionPredicate((docName, description) => true);
 
                 // Define the BearerAuth scheme that's in use
@@ -118,7 +118,7 @@ namespace EventCloud.Web.Host.Startup
             // Enable middleware to serve swagger-ui assets (HTML, JS, CSS etc.)
             app.UseSwaggerUI(options =>
             {
-                options.SwaggerEndpoint("/swagger/v1/swagger.json", "EventCloud API V1");
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "CPULohn SaaS API V1");
                 options.IndexStream = () => Assembly.GetExecutingAssembly()
                     .GetManifestResourceStream("EventCloud.Web.Host.wwwroot.swagger.ui.index.html");
             }); // URL: /swagger
